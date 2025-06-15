@@ -15,37 +15,37 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # ratchet:actions/checkout@v4
       - name: deploy privat-ensligforsorger-eksterne-vedtak to dev
-        uses: nais/deploy/actions/deploy@655191e618af58744d594ab4226aeac78dc739ec # ratchet:nais/deploy/actions/deploy@v2
+        uses: nais/deploy/actions/deploy@d30ad2c21d7862e22d45cac6accfbf42bbbc0f39 # ratchet:nais/deploy/actions/deploy@v2
         env:
           CLUSTER: dev-gcp
           RESOURCE: kafka-aiven/eksterne-vedtak/topic-eksterne-vedtak-dev.yaml
           PRINT_PAYLOAD: true
       - name: deploy privat-ensligforsorger-eksterne-vedtak to prod
-        uses: nais/deploy/actions/deploy@655191e618af58744d594ab4226aeac78dc739ec # ratchet:nais/deploy/actions/deploy@v2
+        uses: nais/deploy/actions/deploy@d30ad2c21d7862e22d45cac6accfbf42bbbc0f39 # ratchet:nais/deploy/actions/deploy@v2
         env:
           CLUSTER: prod-gcp
           RESOURCE: kafka-aiven/eksterne-vedtak/topic-eksterne-vedtak-prod.yaml
           PRINT_PAYLOAD: true
       - name: deploy sykepengevedtak-infotrygd to dev
-        uses: nais/deploy/actions/deploy@655191e618af58744d594ab4226aeac78dc739ec # ratchet:nais/deploy/actions/deploy@v2
+        uses: nais/deploy/actions/deploy@d30ad2c21d7862e22d45cac6accfbf42bbbc0f39 # ratchet:nais/deploy/actions/deploy@v2
         env:
           CLUSTER: dev-gcp
           RESOURCE: kafka-aiven/sykepengevedtak-infotrygd/topic-sykepenger-infotrygd-dev.yaml
           PRINT_PAYLOAD: true
       - name: deploy sykepengevedtak-infotrygd to prod
-        uses: nais/deploy/actions/deploy@655191e618af58744d594ab4226aeac78dc739ec # ratchet:nais/deploy/actions/deploy@v2
+        uses: nais/deploy/actions/deploy@d30ad2c21d7862e22d45cac6accfbf42bbbc0f39 # ratchet:nais/deploy/actions/deploy@v2
         env:
           CLUSTER: prod-gcp
           RESOURCE: kafka-aiven/sykepengevedtak-infotrygd/topic-sykepenger-infotrygd-prod.yaml
           PRINT_PAYLOAD: true
       - name: deploy aivenapp-sykepenger-infotrygd-goldengate to dev
-        uses: nais/deploy/actions/deploy@655191e618af58744d594ab4226aeac78dc739ec # ratchet:nais/deploy/actions/deploy@v2
+        uses: nais/deploy/actions/deploy@d30ad2c21d7862e22d45cac6accfbf42bbbc0f39 # ratchet:nais/deploy/actions/deploy@v2
         env:
           CLUSTER: dev-gcp
           RESOURCE: kafka-aiven/sykepengevedtak-infotrygd/aivenapp-sykepenger-infotrygd-goldengate-dev.yaml
           PRINT_PAYLOAD: true
       - name: deploy aivenapp-sykepenger-infotrygd-goldengate to prod
-        uses: nais/deploy/actions/deploy@655191e618af58744d594ab4226aeac78dc739ec # ratchet:nais/deploy/actions/deploy@v2
+        uses: nais/deploy/actions/deploy@d30ad2c21d7862e22d45cac6accfbf42bbbc0f39 # ratchet:nais/deploy/actions/deploy@v2
         env:
           CLUSTER: prod-gcp
           RESOURCE: kafka-aiven/sykepengevedtak-infotrygd/aivenapp-sykepenger-infotrygd-goldengate-prod.yaml
