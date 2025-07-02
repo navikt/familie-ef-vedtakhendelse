@@ -56,3 +56,11 @@ spec:
         databases:
           - name: familie-ef-vedtakhendelse
             envVarPrefix: DB
+  observability:
+    logging:
+      destinations:
+        - id: loki
+        - id: elastic
+    autoInstrumentation:
+      enabled: true
+      runtime: java
